@@ -44,7 +44,9 @@ int main() {
                 tampilkanPengeluaran(pengeluaran, jumlahPengeluaran);
                 break;
             case 5:
-
+                totalPendapatan = hitungTotal(pendapatan, jumlahPendapatan);
+                totalPengeluaran = hitungTotal(pengeluaran, jumlahPengeluaran);
+                hitungUntungAtauRugi(totalPendapatan, totalPengeluaran);
                 break;
             case 6:
                 cout << "Keluar..." << endl;
@@ -109,4 +111,17 @@ float hitungTotal(const Transaksi transaksi[], int jumlah) {
         total += transaksi[i].jumlah;
     }
     return total;
+}
+
+void hitungUntungAtauRugi(float totalPendapatan, float totalPengeluaran) {
+    cout << "\nTotal Pendapatan: Rp" << totalPendapatan << endl;
+    cout << "Total Pengeluaran: Rp" << totalPengeluaran << endl;
+    float untungAtauRugi = totalPendapatan - totalPengeluaran;
+    if (untungAtauRugi > 0) {
+        cout << "Untung: Rp" << untungAtauRugi << endl;
+    } else if (untungAtauRugi < 0) {
+        cout << "Rugi: Rp" << -untungAtauRugi << endl;
+    } else {
+        cout << "Impas" << endl;
+    }
 }
