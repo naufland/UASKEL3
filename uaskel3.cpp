@@ -9,6 +9,7 @@ struct Transaksi {
 };
 
 void tambahPendapatan(Transaksi pendapatan[], int &jumlahPendapatan);
+void tambahPengeluaran(Transaksi pengeluaran[], int &jumlahPengeluaran);
 
 int main() {
     Transaksi pendapatan[100];
@@ -29,10 +30,10 @@ int main() {
 
         switch (pilihan) {
             case 1:
-              tambahPendapatan(pendapatan, jumlahPendapatan);
+                tambahPendapatan(pendapatan, jumlahPendapatan);
                 break;
             case 2:
-                
+                tambahPengeluaran(pengeluaran, jumlahPengeluaran);
                 break;
             case 3:
                 
@@ -71,3 +72,18 @@ void tambahPendapatan(Transaksi pendapatan[], int &jumlahPendapatan) {
     jumlahPendapatan++;
 }
 
+void tambahPengeluaran(Transaksi pengeluaran[], int &jumlahPengeluaran) {
+    if (jumlahPengeluaran >= 100) {
+        cout << "Tidak dapat menambah pengeluaran lagi. Batas maksimum tercapai." << endl;
+        return;
+    }
+    cout << "Masukkan deskripsi pengeluaran: ";
+    cin.ignore();
+    getline(cin, pengeluaran[jumlahPengeluaran].deskripsi);
+    cout << "Masukkan jumlah pengeluaran: ";
+    cin >> pengeluaran[jumlahPengeluaran].jumlah;
+    cout << "Masukkan tanggal pengeluaran (DD-MM-YYYY): ";
+    cin.ignore();
+    getline(cin, pengeluaran[jumlahPengeluaran].tanggal);
+    jumlahPengeluaran++;
+}
