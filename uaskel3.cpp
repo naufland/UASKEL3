@@ -12,6 +12,8 @@ void tambahPendapatan(Transaksi pendapatan[], int &jumlahPendapatan);
 void tambahPengeluaran(Transaksi pengeluaran[], int &jumlahPengeluaran);
 void tampilkanPendapatan(const Transaksi pendapatan[], int jumlahPendapatan);
 void tampilkanPengeluaran(const Transaksi pengeluaran[], int jumlahPengeluaran);
+float hitungTotal(const Transaksi transaksi[], int jumlah);
+void hitungUntungAtauRugi(float totalPendapatan, float totalPengeluaran);
 
 int main() {
     Transaksi pendapatan[100];
