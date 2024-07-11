@@ -36,13 +36,13 @@ int main() {
                 tambahPengeluaran(pengeluaran, jumlahPengeluaran);
                 break;
             case 3:
-                
+                tampilkanPendapatan(pendapatan, jumlahPendapatan);
                 break;
             case 4:
-                
+
                 break;
             case 5:
-                
+
                 break;
             case 6:
                 cout << "Keluar..." << endl;
@@ -87,3 +87,11 @@ void tambahPengeluaran(Transaksi pengeluaran[], int &jumlahPengeluaran) {
     getline(cin, pengeluaran[jumlahPengeluaran].tanggal);
     jumlahPengeluaran++;
 }
+
+void tampilkanPendapatan(const Transaksi pendapatan[], int jumlahPendapatan) {
+    cout << "\n=== Daftar Pendapatan ===" << endl;
+    for (int i = 0; i < jumlahPendapatan; i++) {
+        cout << i + 1 << ". " << pendapatan[i].deskripsi << ": Rp" << pendapatan[i].jumlah << " (Tanggal: " << pendapatan[i].tanggal << ")" << endl;
+    }
+}
+
