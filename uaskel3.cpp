@@ -27,7 +27,7 @@ int main() {
 
         switch (pilihan) {
             case 1:
-              
+              tambahPendapatan(pendapatan, jumlahPendapatan);
                 break;
             case 2:
                 
@@ -51,3 +51,21 @@ int main() {
 
     return 0;
 }
+
+
+void tambahPendapatan(Transaksi pendapatan[], int &jumlahPendapatan) {
+    if (jumlahPendapatan >= 100) {
+        cout << "Tidak dapat menambah pendapatan lagi. Batas maksimum tercapai." << endl;
+        return;
+    }
+    cout << "Masukkan deskripsi pendapatan: ";
+    cin.ignore();
+    getline(cin, pendapatan[jumlahPendapatan].deskripsi);
+    cout << "Masukkan jumlah pendapatan: ";
+    cin >> pendapatan[jumlahPendapatan].jumlah;
+    cout << "Masukkan tanggal pendapatan (DD-MM-YYYY): ";
+    cin.ignore();
+    getline(cin, pendapatan[jumlahPendapatan].tanggal);
+    jumlahPendapatan++;
+}
+
