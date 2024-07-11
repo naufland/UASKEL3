@@ -8,6 +8,8 @@ struct Transaksi {
     string tanggal;
 };
 
+void tambahPendapatan(Transaksi pendapatan[], int &jumlahPendapatan);
+
 int main() {
     Transaksi pendapatan[100];
     Transaksi pengeluaran[100];
