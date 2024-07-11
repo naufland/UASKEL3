@@ -10,6 +10,8 @@ struct Transaksi {
 
 void tambahPendapatan(Transaksi pendapatan[], int &jumlahPendapatan);
 void tambahPengeluaran(Transaksi pengeluaran[], int &jumlahPengeluaran);
+void tampilkanPendapatan(const Transaksi pendapatan[], int jumlahPendapatan);
+void tampilkanPengeluaran(const Transaksi pengeluaran[], int jumlahPengeluaran);
 
 int main() {
     Transaksi pendapatan[100];
@@ -39,7 +41,7 @@ int main() {
                 tampilkanPendapatan(pendapatan, jumlahPendapatan);
                 break;
             case 4:
-
+                tampilkanPengeluaran(pengeluaran, jumlahPengeluaran);
                 break;
             case 5:
 
@@ -94,4 +96,9 @@ void tampilkanPendapatan(const Transaksi pendapatan[], int jumlahPendapatan) {
         cout << i + 1 << ". " << pendapatan[i].deskripsi << ": Rp" << pendapatan[i].jumlah << " (Tanggal: " << pendapatan[i].tanggal << ")" << endl;
     }
 }
-
+void tampilkanPengeluaran(const Transaksi pengeluaran[], int jumlahPengeluaran) {
+    cout << "\n=== Daftar Pengeluaran ===" << endl;
+    for (int i = 0; i < jumlahPengeluaran; i++) {
+        cout << i + 1 << ". " << pengeluaran[i].deskripsi << ": Rp" << pengeluaran[i].jumlah << " (Tanggal: " << pengeluaran[i].tanggal << ")" << endl;
+    }
+}
