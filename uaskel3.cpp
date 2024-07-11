@@ -46,6 +46,7 @@ int main() {
                 tampilkanPengeluaran(pengeluaran, jumlahPengeluaran);
                 break;
             case 5:
+                float totalPendapatan, totalPengeluaran;
                 totalPendapatan = hitungTotal(pendapatan, jumlahPendapatan);
                 totalPengeluaran = hitungTotal(pengeluaran, jumlahPengeluaran);
                 hitungUntungAtauRugi(totalPendapatan, totalPengeluaran);
