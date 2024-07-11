@@ -102,3 +102,11 @@ void tampilkanPengeluaran(const Transaksi pengeluaran[], int jumlahPengeluaran) 
         cout << i + 1 << ". " << pengeluaran[i].deskripsi << ": Rp" << pengeluaran[i].jumlah << " (Tanggal: " << pengeluaran[i].tanggal << ")" << endl;
     }
 }
+
+float hitungTotal(const Transaksi transaksi[], int jumlah) {
+    float total = 0;
+    for (int i = 0; i < jumlah; i++) {
+        total += transaksi[i].jumlah;
+    }
+    return total;
+}
