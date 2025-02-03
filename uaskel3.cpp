@@ -23,7 +23,7 @@ int main() {
 
     do {
         cout << "\n=== Kalkulator Keuangan ===" << endl;
-        cout << "1. Tambah Pendapatan" << endl;
+        cout << "1. Tambahkan Pendapatan" << endl;
         cout << "2. Tambah Pengeluaran" << endl;
         cout << "3. Tampilkan Pendapatan" << endl;
         cout << "4. Tampilkan Pengeluaran" << endl;
